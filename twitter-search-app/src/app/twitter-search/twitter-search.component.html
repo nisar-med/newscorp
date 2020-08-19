@@ -1,0 +1,32 @@
+<div>
+    <br/>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="Search @KidspotSocial">
+                    <button class="input-group-append btn btn-info" (click)="search()">
+                        Search
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        Clear
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="alert alert-primary" *ngIf="message">{{message}}</div>
+    <br/>
+    <div class="table-responsive" *ngIf="tweets">
+        <table class="table table-striped">
+            <thead>
+            </thead>
+            <tbody>
+            <tr *ngFor="let tweet of tweets">
+                <td>{{tweet.text}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

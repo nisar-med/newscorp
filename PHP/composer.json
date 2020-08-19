@@ -1,0 +1,21 @@
+{
+    "name": "nisar/php",
+    "description": "Newscorp test",
+    "type": "project",
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "authors": [
+        {
+            "name": "Syed Ahmed",
+            "email": "nisar.med@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PHPTest\\": "./src"
+        }
+    }    
+}
